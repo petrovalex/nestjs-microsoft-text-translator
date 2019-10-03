@@ -1,0 +1,45 @@
+{
+  "name": "@nestjs/microsoft-text-translator",
+  "version": "0.0.1",
+  "description": "Nest - modern, fast, powerful node.js web framework (@microsoft-text-translator)",
+  "author": "Aleksandr Petrov",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index",
+  "types": "dist/index",
+  "scripts": {
+    "build": "node ./node_modules/rimraf/rimraf dist && tsc -p tsconfig.json",
+    "format": "prettier --write \"lib/**/*.ts\"",
+    "precommit": "lint-staged",
+    "prepublish:npm": "npm run build",
+    "publish:npm": "npm publish --access public"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^6.0.0",
+    "rxjs": "^6.2.1",
+    "reflect-metadata": "^0.1.12"
+  },
+  "devDependencies": {
+    "@nestjs/common": "6.8.0",
+    "@types/node": "7.10.7",
+    "husky": "3.0.7",
+    "lint-staged": "9.4.0",
+    "prettier": "1.18.2",
+    "rimraf": "^3.0.0",
+    "rxjs": "6.5.3",
+    "rxjs-compat": "6.5.3",
+    "typescript": "3.6.3"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "microsoft-text-translator": "0.0.3",
+    "reflect-metadata": "^0.1.13"
+  }
+}
