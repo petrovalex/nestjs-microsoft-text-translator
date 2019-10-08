@@ -41,5 +41,10 @@
   "dependencies": {
     "microsoft-text-translator": "0.0.3",
     "reflect-metadata": "^0.1.13"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/petrovalex/nestjs-microsoft-text-translator.git"
+  },
+  "homepage": "https://github.com/petrovalex/nestjs-microsoft-text-translator"
 }
